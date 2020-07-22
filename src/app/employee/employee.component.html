@@ -1,0 +1,21 @@
+<div>
+    <div>
+        <label for="eno">Employee No</label>
+        <input type="text" class="form-control" [(ngModel)]="eno">
+    </div>
+    <div>
+        <label for="ename">Employee Name</label>
+        <input type="text" class="form-control" [(ngModel)]="ename">
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="saveHandler()" >Save</button>
+    </div>
+</div>
+<div>
+    <div *ngFor="let employee of employeesList">
+        <div class="card">
+            <div class="card-header">{{employee.eno}}</div>
+            <div class="card-body">{{employee.eno}} - {{employee.ename}}</div>
+        </div>
+    </div>
+</div>
